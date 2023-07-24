@@ -26,6 +26,7 @@ def startDownload():
 
         vidTitle = ytObject.title
         vidViews = ytObject.views
+        vidViews = f"{vidViews:,}"
         vidAuthor = ytObject.author
         vidDate = ytObject.publish_date
         finalDate = str(vidDate)

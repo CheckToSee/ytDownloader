@@ -16,3 +16,5 @@ print(finalDate[:10])
 
 my_video = my_video.streams.get_highest_resolution()
 #my_video.download('C:\\Users\\asdf\\Desktop\\YTDownloads')
+
+print(f"{vidViews:,}")
