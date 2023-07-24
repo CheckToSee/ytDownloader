@@ -21,7 +21,7 @@ def startDownload():
         else:
             vid.download(pathLink)
 
-        finishLabel.configure(text="Download Complete!", text_color="white")
+        finishLabel.configure(text="Download Complete!", text_color="green")
 
 
         vidTitle = ytObject.title
@@ -62,7 +62,7 @@ app.geometry("720x480")
 
 # Adding UI Elements
 header = customtkinter.CTkLabel(app, text = "YouTube Downloader", font=('', 40))
-header.pack(padx=5, pady=10)
+header.pack(padx=5, pady=29)
 
 title = customtkinter.CTkLabel(app, text="Paste YouTube link here:")
 title.pack(padx=10, pady=10)
@@ -81,7 +81,7 @@ folder_link = customtkinter.CTkEntry(app, width = 350, height=30, textvariable=f
 folder_link.pack()
 
 # Download button
-download = customtkinter.CTkButton(app, text="Download", command=startDownload)
+download = customtkinter.CTkButton(app, text="Download", height=40, width=160, corner_radius=30, hover_color="red", fg_color="grey", command=startDownload)
 download.pack(padx=15, pady=15)
 
 # Complete message
@@ -92,7 +92,7 @@ finishLabel.pack()
 pPercentage = customtkinter.CTkLabel(app, text="0%", )
 pPercentage.pack()
 
-progressBar = customtkinter.CTkProgressBar(app, width=400)
+progressBar = customtkinter.CTkProgressBar(app, width=400, progress_color="red")
 progressBar.set(0)
 progressBar.pack()
 
@@ -103,3 +103,5 @@ downloadInfo.pack(padx=20, pady=20)
 
 # Run app
 app.mainloop()
+
+#python -m YTDownloader.py --noconsol --onefile --icon="C:\Users\asdf\Desktop\Python Projects\ytDownloader\YTDownloader.ico"
