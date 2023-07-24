@@ -62,7 +62,7 @@ app.geometry("720x480")
 
 # Adding UI Elements
 header = customtkinter.CTkLabel(app, text = "YouTube Downloader", font=('', 40))
-header.pack(padx=5, pady=29)
+header.pack(padx=5, pady=25)
 
 title = customtkinter.CTkLabel(app, text="Paste YouTube link here:")
 title.pack(padx=10, pady=10)
